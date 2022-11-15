@@ -1,0 +1,56 @@
+<style>
+       body{
+         background-color:pink;
+         
+         }
+         span{
+           position:absolute;
+           top:30%;
+           left:40%;
+           font-size:100px;
+           
+           }
+    </style>
+  </head>
+  <body>	
+   
+     <span>🍒</span>
+     <script>
+     
+       //循环100个樱桃
+       for(let i = 0; i < 50; i++){
+         //创建标签
+         let yingtao=document.createElement("span")
+         //设置随机位置
+         
+         yingtao.style.left = Math.round(Math.random() * 100) + "%"
+         yingtao.style.fontSize = Math.round(Math.random() * 80) + "px"
+         yingtao.innerHTML = "🍒"
+         //插入到页面中
+         document.body.appendChild(yingtao)
+         
+         //定时器 位移动画
+         //初始位置
+         let top = Math.round(Math.random() * 100) - 100
+         //移动位置
+         let i = top
+         
+         //定时器
+         setInterval(function (){
+             i++
+             yingtao.style.top = i + "%"
+             
+         
+         },80)
+       
+       
+       }
+     
+     
+      
+     </script>
+  
+  
+  
+  </body>
+</html>
